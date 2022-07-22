@@ -233,8 +233,7 @@ class LaneLines:
             out_img[y, x-100+W//2] = self.keep_straight_img[y, x, :3]
 
         cv2.putText(out_img, msg, org=(10, 240), fontFace=cv2.FONT_HERSHEY_SIMPLEX, fontScale=1, color=(255, 255, 255), thickness=2)
-        if direction in 'LR':
-            cv2.putText(out_img, curvature_msg, org=(10, 280), fontFace=cv2.FONT_HERSHEY_SIMPLEX, fontScale=1, color=(255, 255, 255), thickness=2)
+        
 
   
         return out_img
